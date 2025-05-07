@@ -499,6 +499,7 @@ type MessageReference struct {
 	ChannelID       string               `json:"channel_id,omitempty"`
 	GuildID         string               `json:"guild_id,omitempty"`
 	FailIfNotExists *bool                `json:"fail_if_not_exists,omitempty"`
+	ReferenceType uint8 `json:"type,omitempty"`
 }
 
 func (m *Message) reference(refType MessageReferenceType, failIfNotExists bool) *MessageReference {
